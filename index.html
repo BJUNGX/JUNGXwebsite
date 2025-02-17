@@ -1,21 +1,52 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang web đầu tiên</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giới thiệu thành viên</title>
+  <!-- Liên kết tới file CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Chào mừng đến với website của tôi!</h1>
-    </header>
-    
-    <section>
-        <p>Đây là một trang web đơn giản.</p>
-        <button onclick="showMessage()">Nhấn vào đây</button>
-    </section>
+  <header>
+    <h1>Giới thiệu Thành Viên</h1>
+  </header>
 
-    <script src="script.js"></script>
+  <section>
+    <table>
+      <thead>
+        <tr>
+          <th>Tên</th>
+          <th>Tuổi</th>
+          <th>Ngày tháng năm sinh</th>
+          <th>Giới thiệu</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nguyễn Văn A</td>
+          <td>25</td>
+          <td>01/01/2000</td>
+          <td>Chuyên gia phát triển web, có kinh nghiệm lâu năm trong lĩnh vực lập trình.</td>
+        </tr>
+        <tr>
+          <td>Trần Thị B</td>
+          <td>23</td>
+          <td>15/05/2002</td>
+          <td>Thiết kế đồ họa sáng tạo, luôn mang đến những ý tưởng mới mẻ.</td>
+        </tr>
+        <tr>
+          <td>Lê Văn C</td>
+          <td>27</td>
+          <td>30/09/1998</td>
+          <td>Lập trình viên chuyên về ứng dụng di động và trải nghiệm người dùng.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>Bản quyền © 2025</p>
+  </footer>
 </body>
 </html>
