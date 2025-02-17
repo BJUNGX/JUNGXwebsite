@@ -1,21 +1,116 @@
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Định dạng cho body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #f4f7f9;
+  color: #333;
+  line-height: 1.6;
 }
+
+/* Header với nền gradient và ảnh (nếu có) */
 header {
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
+  background: linear-gradient(rgba(0, 123, 255, 0.8), rgba(0, 123, 255, 0.8)), url('header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
 }
-button {
-    background-color: green;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+
+.navbar h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
+
+/* Phần chính */
+main {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* Phần tìm kiếm */
+.search-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-section input {
+  width: 80%;
+  max-width: 500px;
+  padding: 10px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.search-section input:focus {
+  outline: none;
+  border-color: #0056b3;
+}
+
+/* Bảng thành viên */
+.table-section {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background: #007bff;
+  color: #fff;
+}
+
+thead th {
+  padding: 12px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Hiệu ứng hover cho các dòng bảng */
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Footer */
+footer {
+  background: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar h1 {
+    font-size: 1.5rem;
+  }
+  
+  thead th, tbody td {
+    padding: 10px;
+  }
+
+  .search-section input {
+    width: 90%;
+  }
+}
+
 
