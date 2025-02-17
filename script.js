@@ -1,52 +1,22 @@
-/* Định dạng chung cho trang */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  margin: 0;
-  padding: 0;
-}
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('searchInput');
+  const table = document.getElementById('membersTable');
+  const rows = table.getElementsByTagName('tr');
 
-/* Định dạng header */
-header {
-  background-color: #007bff;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
+  // Lắng nghe sự kiện khi người dùng nhập liệu
+  searchInput.addEventListener('keyup', function() {
+    const filter = searchInput.value.toUpperCase();
 
-/* Định dạng nội dung chính */
-section {
-  padding: 20px;
-}
+    // Duyệt qua các dòng (bỏ qua dòng tiêu đề)
+    for (let i = 1; i < rows.length; i++) {
+      const rowText = rows[i].textContent || rows[i].innerText;
+      // Kiểm tra xem dòng có chứa từ khóa không
+      if (rowText.toUpperCase().indexOf(filter) > -1) {
+        rows[i].style.display = '';
+      } else {
+        rows[i].style.display = 'none';
+      }
+    }
+  });
+});
 
-/* Định dạng bảng */
-table {
-  width: 100%;
-  max-width: 800px;
-  margin: auto;
-  border-collapse: collapse;
-}
-
-table, th, td {
-  border: 1px solid #ccc;
-}
-
-th, td {
-  padding: 10px;
-  text-align: left;
-}
-
-th {
-  background-color: #e0e0e0;
-}
-
-/* Định dạng footer */
-footer {
-  background-color: #007bff;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
